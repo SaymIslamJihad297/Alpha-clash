@@ -1,4 +1,4 @@
-function getARandomAlphabet(){
+function getARandomAlphabet() {
     const alphaBetsList = 'abcdefghijklmnopqrstuvwxyz';
     const alphaBetsplit = alphaBetsList.split('');
     // console.log(alphaBetsplit);
@@ -11,11 +11,30 @@ function getARandomAlphabet(){
     return alphaBetsplit[index];
 }
 
-function setBackgroundColorById(elementId){
+function setBackgroundColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
 }
-function removeBackgroundColorById(elementId){
+function removeBackgroundColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('bg-orange-400');
+}
+
+function getElementInnerTextById(elementId) {
+    const element = document.getElementById(elementId);
+    const elementValue = element.innerText;
+    const value = parseInt(elementValue);
+    return value;
+}
+
+
+function setElementInnerTextById(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
+
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
 }
